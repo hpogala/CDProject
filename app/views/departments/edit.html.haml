@@ -1,0 +1,9 @@
+%h1 Departments#edit
+%h2 Edit Department information
+%p Find me in app/views/departments/edit.html.haml
+= form_tag department_path(@department), :method => :put do
+  = label :department, :name, 'Name'
+  = text_field :department, :name
+  = label :department, :description, 'Description'
+  = text_field :department, :description
+  = submit_tag 'Save changes'

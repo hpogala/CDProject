@@ -1,0 +1,18 @@
+%h1 Courses#index
+%p="Courses from " + @department.name + " department" 
+%table#courses
+  %thead
+    %tr
+      %th code
+      %th name
+      %th professor
+      %th more actions
+    %tbody
+      - @courses.each do |course|
+        %tr
+          %td= course.code
+          %td= course.name
+          %td= course.professor
+          %td= link_to "Edit course information", edit_department_course_path(course.department, course)
+=link_to 'Add new course', new_department_course_path(@department)
+

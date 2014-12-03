@@ -1,0 +1,16 @@
+%%h1 All Departments
+%table#departments
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th More Info
+      %th courses
+    %tbody
+      - @departments.each do |d|
+        %tr
+          %td= d.name
+          %td= d.description
+          %td= link_to "More about #{d.name}", department_path(d)
+          %td= link_to "View courses", department_courses_path(d)
+=link_to 'Add new Department', new_department_path

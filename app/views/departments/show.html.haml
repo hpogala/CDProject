@@ -1,0 +1,10 @@
+%h2 Details about #{@department.name}
+%ul#details
+  %li
+    description:
+    = @department.description
+  
+=link_to 'Edit department information', edit_department_path(@department)
+=link_to 'Back to departments list', departments_path
+
+

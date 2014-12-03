@@ -1,0 +1,11 @@
+%h1 Courses#edit
+%p Find me in app/views/courses/edit.html.haml
+%h2 Editing Course
+= form_tag department_course_path(course_id: @course.id), :method => :put do
+  = label :course, :code, 'Code'
+  = text_field :course, :code
+  = label :course, :name, 'Name'
+  = text_field :course, :name
+  = label :course, :professor, 'Professor'
+  = text_field :course, :professor
+  = submit_tag 'Save changes'

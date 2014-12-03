@@ -1,0 +1,12 @@
+%h1 Courses#new
+%p 
+="Adding a new course to " + @department.name + " department" 
+%h2 Create a new Course
+= form_tag department_courses_path(@department), :method => :post do
+  = label :course, :code, 'Code'
+  = text_field :course, :code
+  = label :course, :name, 'Name'
+  = text_field :course, :name
+  = label :course, :professor, 'Professor'
+  = text_field :course, :professor
+  = submit_tag 'Save changes'

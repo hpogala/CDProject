@@ -1,0 +1,10 @@
+h1 Departments#new
+%p Find me in app/views/departments/new.html.haml
+%h2 Create a new Department
+= form_tag departments_path, :method => :post do
+  = label :department, :name, 'Name'
+  = text_field :department, :name
+  = label :department , :description, 'Description' 
+  = text_field :department, :description
+  = submit_tag 'Save changes'
+
